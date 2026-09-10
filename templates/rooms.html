@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rooms - Royal Palace Hotel</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <nav>
+        <div class="logo">Royal Palace Hotel</div>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/rooms">Rooms</a></li>
+            <li><a href="/booking">Booking</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/admin">Admin</a></li>
+        </ul>
+    </nav>
+
+    <section class="rooms-section">
+        <h1>Our Rooms</h1>
+        <div class="room-cards">
+            {% for room in rooms %}
+            <div class="room-card">
+                <img src="{{ url_for('static', filename='images/' + room[4]) }}" alt="{{ room[1] }}">
+                <h3>{{ room[1] }}</h3>
+                <p>₹{{ room[2] }} / night</p>
+                <p>{{ room[3] }}</p>
+                <a href="/booking" class="btn">Book Now</a>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Royal Palace Hotel. All rights reserved.</p>
+    </footer>
+</body>
+</html>

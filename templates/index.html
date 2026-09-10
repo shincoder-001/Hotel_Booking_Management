@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Royal Palace Hotel</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">Royal Palace Hotel</div>
+
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/rooms">Rooms</a></li>
+            <li><a href="/booking">Booking</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/admin">Admin</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+
+        <img src="{{ url_for('static', filename='images/room4.jpg') }}"
+             alt="Royal Palace Hotel">
+
+        <div class="hero-text">
+
+            <h1>ROYAL PALACE HOTEL</h1>
+
+            <p>
+                Comfortable stay at an affordable price.
+            </p>
+
+            <a href="/rooms" class="btn">View Rooms</a>
+
+            <a href="/booking" class="btn">Book Now</a>
+
+        </div>
+
+    </section>
+
+
+    <!-- Facilities -->
+    <section class="facilities">
+
+        <h2>Our Facilities</h2>
+
+        <ul>
+            <li>✓ Free Wi-Fi</li>
+            <li>✓ Room Service</li>
+            <li>✓ Parking</li>
+            <li>✓ Restaurant</li>
+        </ul>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>
+            &copy; 2026 Royal Palace Hotel. All rights reserved.
+        </p>
+    </footer>
+
+</body>
+</html>

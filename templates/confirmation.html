@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Booking Confirmed - Royal Palace Hotel</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">Royal Palace Hotel</div>
+
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/rooms">Rooms</a></li>
+            <li><a href="/booking">Booking</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/admin">Admin</a></li>
+        </ul>
+    </nav>
+
+
+    <section class="confirmation-section">
+
+        <div class="confirmation-box">
+
+            <div class="success-icon">
+                ✓
+            </div>
+
+            <h1>Booking Confirmed!</h1>
+
+            <p class="confirmation-text">
+                Thank you, {{ booking[1] }}.
+                Your room has been successfully booked.
+            </p>
+
+
+            <div class="booking-details">
+
+                <div>
+                    <strong>Booking ID</strong>
+                    <span>#{{ booking[0] }}</span>
+                </div>
+
+                <div>
+                    <strong>Room</strong>
+                    <span>{{ booking[4] }}</span>
+                </div>
+
+                <div>
+                    <strong>Check-in</strong>
+                    <span>{{ booking[5] }}</span>
+                </div>
+
+                <div>
+                    <strong>Check-out</strong>
+                    <span>{{ booking[6] }}</span>
+                </div>
+
+                <div>
+                    <strong>Guests</strong>
+                    <span>{{ booking[7] }}</span>
+                </div>
+
+                <div>
+                    <strong>Number of Nights</strong>
+                    <span>{{ nights }}</span>
+                </div>
+
+                <div class="total">
+                    <strong>Total Amount</strong>
+                    <span>₹{{ "%.2f"|format(booking[8]) }}</span>
+                </div>
+
+            </div>
+
+
+            <p class="contact-note">
+                We will contact you soon regarding your booking.
+            </p>
+
+            <a href="/" class="btn">
+                Back to Home
+            </a>
+
+            <a href="/rooms" class="btn secondary-btn">
+                View Rooms
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+        <p>
+            &copy; 2026 Royal Palace Hotel.
+            All rights reserved.
+        </p>
+    </footer>
+
+</body>
+</html>

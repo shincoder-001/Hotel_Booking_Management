@@ -1,0 +1,425 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+    background: #f7f5f2;
+    color: #2b2b2b;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1a1a2e;
+    padding: 15px 40px;
+}
+
+nav .logo {
+    color: #d4af37;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+nav ul li a:hover {
+    color: #d4af37;
+}
+
+.hero {
+    position: relative;
+    text-align: center;
+}
+
+.hero img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    filter: brightness(55%);
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+.hero-text h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.btn {
+    display: inline-block;
+    background: #d4af37;
+    color: #1a1a2e;
+    padding: 10px 20px;
+    margin: 10px 8px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #c19b2e;
+}
+
+.facilities {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.facilities ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.about-content {
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.rooms-section {
+    padding: 50px 40px;
+    text-align: center;
+}
+
+.room-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.room-card {
+    background: white;
+    width: 280px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding-bottom: 15px;
+}
+
+.room-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.room-card h3, .room-card p {
+    padding: 5px 15px;
+}
+
+.form-section {
+    max-width: 500px;
+    margin: 50px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.form-section h1 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.form-section input,
+.form-section select,
+.form-section textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.success-message {
+    background: #d4f4dd;
+    color: #1a6c2e;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #1a1a2e;
+    color: white;
+    margin-top: 30px;
+}
+/* =========================
+   ADMIN DASHBOARD
+   ========================= */
+
+.admin-section {
+    padding: 40px;
+}
+
+.admin-section h1 {
+    margin-bottom: 5px;
+}
+
+.admin-section h2 {
+    margin-top: 30px;
+    margin-bottom: 12px;
+}
+
+
+/* Add Room Form */
+
+.add-room-form {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.add-room-form input {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+
+/* Admin Tables */
+
+.admin-section table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.admin-section th {
+    background: #19182d;
+    color: white;
+    padding: 12px;
+    text-align: left;
+}
+
+.admin-section td {
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+
+
+/* Edit Button */
+
+.edit-btn {
+    display: inline-block;
+    background: #d9ad2b;
+    color: #111;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.edit-btn:hover {
+    background: #c49b22;
+}
+
+
+/* Delete Button */
+
+.delete-btn {
+    color: #d00;
+    font-weight: bold;
+}
+
+
+/* =========================
+   EDIT ROOM PAGE
+   ========================= */
+
+.edit-room-section {
+    min-height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 50px 20px;
+}
+
+.edit-room-card {
+    width: 450px;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+}
+
+.edit-room-card h1 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.edit-room-card label {
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.edit-room-card input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.edit-room-card .btn {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.cancel-btn {
+    display: block;
+    text-align: center;
+    margin-top: 12px;
+    color: #333;
+    text-decoration: none;
+}
+/* Booking Confirmation */
+
+.confirmation-section {
+    min-height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+}
+
+.confirmation-box {
+    background: white;
+    width: 600px;
+    max-width: 100%;
+    padding: 40px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+}
+
+.success-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    background: #28a745;
+    color: white;
+    font-size: 45px;
+    line-height: 70px;
+    font-weight: bold;
+}
+
+.confirmation-box h1 {
+    margin-bottom: 10px;
+}
+
+.confirmation-text {
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.booking-details {
+    text-align: left;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 25px;
+}
+
+.booking-details div {
+    display: flex;
+    justify-content: space-between;
+    padding: 13px 18px;
+    border-bottom: 1px solid #eee;
+}
+
+.booking-details div:last-child {
+    border-bottom: none;
+}
+
+.booking-details strong {
+    color: #333;
+}
+
+.booking-details span {
+    color: #555;
+}
+
+.booking-details .total {
+    background: #f8f8f8;
+    font-size: 18px;
+}
+
+.booking-details .total span {
+    font-weight: bold;
+    color: #222;
+}
+
+.contact-note {
+    color: #555;
+    margin-bottom: 25px;
+}
+
+.secondary-btn {
+    margin-left: 10px;
+}
+.error-message {
+    background: #f8d7da;
+    color: #842029;
+    padding: 12px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}.logout-btn {
+    display: inline-block;
+    background: #dc3545;
+    color: white;
+    padding: 10px 18px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.logout-btn:hover {
+    background: #b02a37;
+}

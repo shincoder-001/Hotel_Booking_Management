@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Edit Room - Royal Palace Hotel</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}"
+    >
+
+</head>
+
+<body>
+
+<nav>
+
+    <div class="logo">
+        Royal Palace Hotel
+    </div>
+
+    <ul>
+
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/rooms">Rooms</a></li>
+        <li><a href="/booking">Booking</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="/admin">Admin</a></li>
+
+    </ul>
+
+</nav>
+
+
+<section class="edit-room-section">
+
+    <div class="edit-room-card">
+
+        <h1>Edit Room</h1>
+
+        <form
+            method="POST"
+            action="/admin/edit_room/{{ room[0] }}"
+        >
+
+            <label>Room Name</label>
+
+            <input
+                type="text"
+                name="name"
+                value="{{ room[1] }}"
+                required
+            >
+
+
+            <label>Price</label>
+
+            <input
+                type="number"
+                name="price"
+                value="{{ room[2] }}"
+                required
+            >
+
+
+            <label>Description</label>
+
+            <input
+                type="text"
+                name="description"
+                value="{{ room[3] }}"
+                required
+            >
+
+
+            <label>Image Filename</label>
+
+            <input
+                type="text"
+                name="image"
+                value="{{ room[4] }}"
+                required
+            >
+
+
+            <button type="submit" class="btn">
+                Update Room
+            </button>
+
+            <a href="/admin" class="cancel-btn">
+                Cancel
+            </a>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <p>
+        &copy; 2026 Royal Palace Hotel. All rights reserved.
+    </p>
+
+</footer>
+
+</body>
+
+</html>
